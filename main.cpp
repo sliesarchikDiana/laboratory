@@ -8,8 +8,7 @@
 using namespace std;
 
 int main() {
-    string greeting = "Test begin";
-    cout << greeting << endl;
+    cout << "Test begin"<< endl;
 
     blockbuster avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000);
     blockbuster defaultBlockbuster;
@@ -27,6 +26,7 @@ int main() {
     thriller movedThriller(std::move(*originalThriller));
     delete originalThriller;
 
+    std::cout << std::endl;
     std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
 
     const thriller se7en("Se7en", "David Fincher", "Detectives track down a serial killer who uses deadly sins as motives.", 127, 33000000);
@@ -34,7 +34,8 @@ int main() {
     std::cout << "Object count for thriller: " << thriller::getObjectCount() << std::endl;
     std::cout<<silenceOfLambs;
 
-//    std::cin >> myThriller;
+    //thriller myThriller;
+    //std::cin >> myThriller;
 
     int totalRuntime = silenceOfLambs + movedThriller;
     std::cout << "Total Running Time: " << totalRuntime << " minutes" << std::endl;

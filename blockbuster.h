@@ -10,9 +10,11 @@ class blockbuster {
     int budget;
     public:
     blockbuster();
-    blockbuster(std::string title, std::string director, std::string plot, int runningTime, int budget);
+    blockbuster(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
+    blockbuster(const blockbuster& other); // Copy constructor
+    blockbuster& operator=(const blockbuster& other); // Copy assignment operator
+    blockbuster(blockbuster&& other) noexcept; //  Move constructor
     ~blockbuster();
-
 
     std::string getTitle() const;
     std::string getDirector() const;
@@ -26,5 +28,4 @@ class blockbuster {
     void setRunningTime(int newRunningTime);
     void setBudget(int newBudget);
 };
-
 #endif //BLOCKBUSTER_H
