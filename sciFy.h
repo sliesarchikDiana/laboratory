@@ -2,6 +2,7 @@
 #define SCIFY_H
 #include "iostream"
 
+
 class sciFy {
 private:
     std::string title;
@@ -11,8 +12,13 @@ private:
     int budget;
 public:
     sciFy();
-    sciFy(std::string title, std::string director, std::string plot, int runningTime, int budget);
+    sciFy(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
+    sciFy(const sciFy& other); // Copy constructor
+    sciFy& operator=(const sciFy& other); // Copy assignment operator
+    sciFy(sciFy&& other) noexcept; //  Move constructor
     ~sciFy();
+
+
 
     std::string getTitle() const;
     std::string getDirector() const;
