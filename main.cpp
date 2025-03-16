@@ -28,17 +28,17 @@ int main() {
 
     std::cout << std::endl;
     std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
-
+    std::cout << std::endl;
     const thriller se7en("Se7en", "David Fincher", "Detectives track down a serial killer who uses deadly sins as motives.", 127, 33000000);
     std::cout << "Title: " << se7en.getTitle() << ", Director: " << se7en.getDirector()<<std::endl<< "Plot: " << se7en.getPlot()<<", Runtime: " << se7en.getRunningTime() << " minutes"<< ", Budget: " << se7en.getBudget() << std::endl;
     std::cout << "Object count for thriller: " << thriller::getObjectCount() << std::endl;
     std::cout<<silenceOfLambs;
-
+    std::cout << std::endl;
     //thriller myThriller;
     //std::cin >> myThriller;
 
     int totalRuntime = silenceOfLambs + movedThriller;
     std::cout << "Total Running Time: " << totalRuntime << " minutes" << std::endl;
-
+    std::cout << std::endl;
     return 0;
 }

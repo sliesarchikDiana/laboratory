@@ -3,11 +3,11 @@
 #include <utility>
 
 sciFy::sciFy(): title("Unknown sci-fi"), director("Unknown"), plot("Unknown"), runningTime(0), budget(0) {
-    std::cout << "Default constructor was called for " << title<<" of the class sciFy" << std::endl;
+    std::cout << "Default constructor was called for " << title<<" of class sciFy" << std::endl;
 }
 
 sciFy::sciFy(std::string  t, std::string  d, std::string p,  int rt, int b) : title(std::move(t)), director(std::move(d)), plot(std::move(p)), runningTime(rt), budget(b) {
-    std::cout << "Parameterized constructor was called for " << title<<" of the class sciFy" << std::endl;
+    std::cout << "Parameterized constructor was called for " << title<<" of class sciFy" << std::endl;
 }
 
 // Copy constructor
@@ -16,7 +16,7 @@ sciFy::sciFy(const sciFy& other) = default;
 sciFy& sciFy::operator=(const sciFy& other) = default;
 // Destructor
 sciFy::~sciFy() {
-    std::cout << "The destructor was called for " << title<<" of the class sciFy" << std::endl;
+    std::cout << "The destructor was called for " << title<<" of class sciFy" << std::endl;
 }
 
 
@@ -44,7 +44,7 @@ sciFy::sciFy(sciFy&& other) noexcept
       plot(std::move(other.plot)),
       runningTime(other.runningTime),
       budget(other.budget) {
-    std::cout << "Move constructor was called for " << this->title <<" of the class sciFy" << std::endl;
+    std::cout << "Move constructor was called for " << this->title <<" of class sciFy" << std::endl;
     other.title = "Discarded";
     other.director = "Discarded";
     other.plot = "Discarded";

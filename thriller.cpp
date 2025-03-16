@@ -4,13 +4,13 @@
 #include <utility>
 int thriller::count = 0;
 
-thriller::thriller(): title("Unknown"), director("Unknown"), plot("Unknown"), runningTime(0), budget(0) {
+thriller::thriller(): title("Unknown thriller"), director("Unknown"), plot("Unknown"), runningTime(0), budget(0) {
     ++count;
-    std::cout << "Default constructor was called for " << this->title << std::endl;
+    std::cout << "Default constructor was called for " << this->title<<" of class thriller" << std::endl;
 }
 thriller::thriller(std::string t, std::string d, std::string p, int rt, int b): title(std::move(t)), director(std::move(d)), plot(std::move(p)), runningTime(rt), budget(b) {
     ++count;
-    std::cout << "Parameterized constructor was called for " << this->title << std::endl;
+    std::cout << "Parameterized constructor was called for " << this->title<<" of class thriller" << std::endl;
 }
 
 // Copy constructor
@@ -19,10 +19,9 @@ thriller::thriller(const thriller& other) = default;
 thriller& thriller::operator=(const thriller& other) = default;
 // Destructor
 thriller::~thriller() {
-    std::cout << "The destructor was called for " << title << std::endl;
+    std::cout << "The destructor was called for " << title <<" of class thriller" << std::endl;
     --count;
 }
-
 
 
 std::string thriller::getTitle() const { return this->title; }
@@ -53,7 +52,7 @@ thriller::thriller(thriller&& other) noexcept
       runningTime(other.runningTime),
       budget(other.budget) {
      ++count;
-    std::cout << "Move constructor was called for " << this->title << std::endl;
+    std::cout << "Move constructor was called for " << this->title <<" of class thriller" << std::endl;
     other.title = "Discarded";
     other.director = "Unknown";
     other.plot = "Unknown";

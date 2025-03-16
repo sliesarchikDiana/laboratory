@@ -9,7 +9,6 @@ private:
     std::string plot;
     int runningTime;
     int budget;
-
     static int count;
 
 public:
