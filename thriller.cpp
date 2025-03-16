@@ -67,7 +67,7 @@ std::ostream& operator<<(std::ostream& os, const thriller& t) {
        << "Director: " << t.director << "\n"
        << "Plot: " << t.plot << "\n"
        << "Running Time: " << t.runningTime << " minutes\n"
-       << "Budget: $" << t.budget << std::endl;
+       << "Budget: tes" << t.budget << std::endl;
     return os;
 }
 
