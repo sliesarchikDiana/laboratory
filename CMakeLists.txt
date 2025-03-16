@@ -12,4 +12,6 @@ add_executable(laboratory
         sciFy.cpp
         sciFy.h
         romCom.cpp
-        romCom.h)
+        romCom.h
+        thriller.cpp
+        thriller.h)
