@@ -3,7 +3,7 @@
 #include <utility>
 
 blockbuster::blockbuster(): title("Unknown blockbuster"), director("Unknown director"), plot("Unknown plot"), runningTime(0), budget(0) {
-    std::cout << "Default constructor was called for " << title << std::endl;
+    std::cout << "Default constructor was called for " << title<<" of class blockbuster"<<std::endl;
 }
 
 blockbuster::blockbuster(std::string  t, std::string  d, std::string p,  int rt, int b) : title(std::move(t)), director(std::move(d)), plot(std::move(p)), runningTime(rt), budget(b) {

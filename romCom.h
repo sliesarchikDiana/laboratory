@@ -12,7 +12,10 @@ private:
 
 public:
     romCom();
-    romCom(std::string title, std::string director, std::string plot, int runningTime, int budget);
+    romCom(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
+    romCom(const romCom& other); // Copy constructor
+    romCom& operator=(const romCom& other); // Copy assignment operator
+    romCom(romCom&& other) noexcept; //  Move constructor
     ~romCom();
 
     std::string getTitle() const;
