@@ -1,7 +1,7 @@
 #ifndef THRILLER_H
 #define THRILLER_H
-
 #include <string>
+
 class thriller {
 private:
     std::string title;
@@ -20,6 +20,7 @@ public:
     thriller(thriller&& other) noexcept; //  Move constructor
     ~thriller();
 
+
     std::string getTitle() const;
     std::string getDirector() const;
     std::string getPlot() const;
@@ -33,6 +34,10 @@ public:
     void setPlot(const std::string& newPlot);
     void setRunningTime(int newRunningTime);
     void setBudget(int newBudget);
+
+    friend std::ostream& operator<<(std::ostream& os, const thriller& t);
+    friend std::istream& operator>>(std::istream& is, thriller& t);
+    friend int operator+(const thriller& lhs, const thriller& rhs);
 
 };
 

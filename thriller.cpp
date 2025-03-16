@@ -3,6 +3,7 @@
 #include <string>
 #include <utility>
 int thriller::count = 0;
+
 thriller::thriller(): title("Unknown"), director("Unknown"), plot("Unknown"), runningTime(0), budget(0) {
     ++count;
     std::cout << "Default constructor was called for " << this->title << std::endl;
@@ -18,8 +19,10 @@ thriller::thriller(const thriller& other) = default;
 thriller& thriller::operator=(const thriller& other) = default;
 // Destructor
 thriller::~thriller() {
+    std::cout << "The destructor was called for " << title << std::endl;
     --count;
 }
+
 
 
 std::string thriller::getTitle() const { return this->title; }
@@ -49,7 +52,42 @@ thriller::thriller(thriller&& other) noexcept
       plot(std::move(other.plot)),
       runningTime(other.runningTime),
       budget(other.budget) {
-    ++count;
+     ++count;
     std::cout << "Move constructor was called for " << this->title << std::endl;
+    other.title = "Discarded";
+    other.director = "Unknown";
+    other.plot = "Unknown";
+    other.runningTime = 0;
+    other.budget = 0;
 }
 int thriller::getObjectCount() { return count; }
+
+
+std::ostream& operator<<(std::ostream& os, const thriller& t) {
+    os << "Title: " << t.title << "\n"
+       << "Director: " << t.director << "\n"
+       << "Plot: " << t.plot << "\n"
+       << "Running Time: " << t.runningTime << " minutes\n"
+       << "Budget: $" << t.budget << std::endl;
+    return os;
+}
+
+std::istream& operator>>(std::istream& is, thriller& t) {
+    std::cout << "Enter title: ";
+    std::getline(is, t.title);
+    std::cout << "Enter director: ";
+    std::getline(is, t.director);
+    std::cout << "Enter plot: ";
+    std::getline(is, t.plot);
+    std::cout << "Enter running time: ";
+    is >> t.runningTime;
+    std::cout << "Enter budget: ";
+    is >> t.budget;
+    return is;
+}
+
+int operator+(const thriller& lhs, const thriller& rhs) {
+    return lhs.getRunningTime() + rhs.getRunningTime();
+}
+
+
