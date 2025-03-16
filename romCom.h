@@ -9,6 +9,7 @@ private:
     std::string plot;
     int runningTime;
     int budget;
+
 public:
     romCom();
     romCom(std::string title, std::string director, std::string plot, int runningTime, int budget);

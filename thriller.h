@@ -1,12 +1,7 @@
-//
-// Created by VivoBook on 16.03.2025.
-//
-
 #ifndef THRILLER_H
 #define THRILLER_H
-#include <iostream>
 
-
+#include <string>
 class thriller {
 private:
     std::string title;
@@ -14,9 +9,13 @@ private:
     std::string plot;
     int runningTime;
     int budget;
+
 public:
     thriller();
-    thriller(std::string title, std::string director, std::string plot, int runningTime, int budget);
+    thriller(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
+    thriller(const thriller& other); // Copy constructor
+    thriller& operator=(const thriller& other); // Copy assignment operator
+    thriller(thriller&& other) noexcept; //  Move constructor
     ~thriller();
 
     std::string getTitle() const;
@@ -32,6 +31,4 @@ public:
     void setBudget(int newBudget);
 };
 
-
-
-#endif //THRILLER_H
+#endif // THRILLER_H

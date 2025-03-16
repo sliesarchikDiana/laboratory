@@ -2,7 +2,7 @@
 #include <iostream>
 #include <utility>
 
-romCom::romCom(): romCom("Title", "unknown", "plot", 100, 1000000)
+romCom::romCom(): romCom("Unknown", "Unknown", "plot", 100, 1000000)
 {
     std::cout<<"Delegated constructor was called for " << title << std::endl;
 }
