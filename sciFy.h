@@ -14,7 +14,6 @@ public:
     sciFy();
     sciFy(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
     sciFy(const sciFy& other); // Copy constructor
-    sciFy& operator=(const sciFy& other); // Copy assignment operator
     sciFy(sciFy&& other) noexcept; //  Move constructor
     ~sciFy();
 

@@ -14,8 +14,6 @@ romCom::romCom(std::string t, std::string d, std::string p, int rt, int b): titl
 
 // Copy constructor
 romCom::romCom(const romCom& other) = default;
-// Copy assignment operator
-romCom& romCom::operator=(const romCom& other) = default;
 // Destructor
 romCom::~romCom() {
     std::cout << "The destructor was called for " << title<<" of class romCom" << std::endl;

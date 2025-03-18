@@ -12,8 +12,6 @@ blockbuster::blockbuster(std::string  t, std::string  d, std::string p,  int rt,
 
 // Copy constructor
 blockbuster::blockbuster(const blockbuster& other) = default;
-// Copy assignment operator
-blockbuster& blockbuster::operator=(const blockbuster& other) = default;
 // Destructor
 blockbuster::~blockbuster() {
     std::cout << "The destructor was called for " << title<<" of class blockbuster"<<std::endl;

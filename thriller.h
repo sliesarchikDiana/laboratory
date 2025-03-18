@@ -15,7 +15,6 @@ public:
     thriller();
     thriller(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
     thriller(const thriller& other); // Copy constructor
-    thriller& operator=(const thriller& other); // Copy assignment operator
     thriller(thriller&& other) noexcept; //  Move constructor
     ~thriller();
 

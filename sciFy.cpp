@@ -12,8 +12,6 @@ sciFy::sciFy(std::string  t, std::string  d, std::string p,  int rt, int b) : ti
 
 // Copy constructor
 sciFy::sciFy(const sciFy& other) = default;
-// Copy assignment operator
-sciFy& sciFy::operator=(const sciFy& other) = default;
 // Destructor
 sciFy::~sciFy() {
     std::cout << "The destructor was called for " << title<<" of class sciFy" << std::endl;

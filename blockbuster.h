@@ -12,7 +12,6 @@ class blockbuster {
     blockbuster();
     blockbuster(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
     blockbuster(const blockbuster& other); // Copy constructor
-    blockbuster& operator=(const blockbuster& other); // Copy assignment operator
     blockbuster(blockbuster&& other) noexcept; //  Move constructor
     ~blockbuster();
 

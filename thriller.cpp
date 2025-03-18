@@ -15,8 +15,6 @@ thriller::thriller(std::string t, std::string d, std::string p, int rt, int b): 
 
 // Copy constructor
 thriller::thriller(const thriller& other) = default;
-// Copy assignment operator
-thriller& thriller::operator=(const thriller& other) = default;
 // Destructor
 thriller::~thriller() {
     std::cout << "The destructor was called for " << title <<" of class thriller" << std::endl;
