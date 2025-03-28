@@ -1,7 +1,7 @@
-#ifndef BLOCKBUSTER_H
-#define BLOCKBUSTER_H
+#ifndef ACTION_H
+#define ACTION_H
 #include "iostream"
-class blockbuster {
+class action {
     private:
     std::string title;
     std::string director;
@@ -9,11 +9,11 @@ class blockbuster {
     int runningTime;
     int budget;
     public:
-    blockbuster();
-    blockbuster(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
-    blockbuster(const blockbuster& other); // Copy constructor
-    blockbuster(blockbuster&& other) noexcept; //  Move constructor
-    ~blockbuster();
+    action();
+    action(std::string  title, std::string  director, std::string  plot, int runningTime, int budget);
+    action(const action& other); // Copy constructor
+    action(action&& other) noexcept; //  Move constructor
+    ~action();
 
     std::string getTitle() const;
     std::string getDirector() const;
@@ -27,4 +27,4 @@ class blockbuster {
     void setRunningTime(int newRunningTime);
     void setBudget(int newBudget);
 };
-#endif //BLOCKBUSTER_H
+#endif //ACTION_H

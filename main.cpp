@@ -1,17 +1,18 @@
 #include <iostream>
 #include <string>
-#include "blockbuster.h"
+#include "action.h"
 #include "sciFy.h"
 #include "romCom.h"
 #include <thriller.h>
 #include <utility>
+//#include "movie.h"
 using namespace std;
 
 int main() {
     cout << "Test begin"<< endl;
 
-    blockbuster avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000);
-    blockbuster defaultBlockbuster;
+    action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000);
+    action defaultAction;
 
     sciFy alien("Alien", "Ridley Scott", "A spaceship crew is stalked by an alien", 117, 11000000);
     sciFy defaultSciFy;
@@ -27,7 +28,7 @@ int main() {
     delete originalThriller;
 
     std::cout << std::endl;
-    std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
+/*    std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
     std::cout << std::endl;
 
     const thriller se7en("Se7en", "David Fincher", "Detectives track down a serial killer who uses deadly sins as motives.", 127, 33000000);
@@ -46,6 +47,7 @@ int main() {
 
     int totalRuntime = silenceOfLambs + movedThriller;
     std::cout << "Total Running Time: " << totalRuntime << " minutes" << std::endl;
+    */
     std::cout << std::endl;
     return 0;
 }
