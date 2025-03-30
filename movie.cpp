@@ -7,20 +7,20 @@ int movie::count = 0;
 
 movie::movie()
     : title("Unknown movie"), director("Unknown"), plot("Unknown"), runningTime(0), budget(0) {
+    std::cout << "Default constructor was called for " << title<<" of parent class movie"<< std::endl;
     count++;
-    std::cout << "Default constructor was called for " << title << std::endl;
 }
-
 movie::movie(std::string t, std::string d, std::string p, int rt, int b)
     : title(std::move(t)), director(std::move(d)), plot(std::move(p)), runningTime(rt), budget(b) {
+    std::cout << "Parameterized constructor was called for " << title <<" of parent class movie"<< std::endl;
     count++;
-    std::cout << "Parameterized constructor was called for " << title << std::endl;
 }
+
 
 movie::movie(const movie& other)
     : title(other.title), director(other.director), plot(other.plot), runningTime(other.runningTime), budget(other.budget) {
     count++;
-    std::cout << "Copy constructor was called for " << title << std::endl;
+    std::cout << "Copy constructor was called for " << title <<" of parent class movie"<< std::endl;
 }
 
 movie::movie(movie&& other) noexcept
@@ -30,7 +30,7 @@ movie::movie(movie&& other) noexcept
       runningTime(other.runningTime),
       budget(other.budget) {
     count++;
-    std::cout << "Move constructor was called for " << title << std::endl;
+    std::cout << "Move constructor was called for " << title <<" of parent class movie"<< std::endl;
 
     other.title = "Discarded";
     other.director = "Unknown";
@@ -40,26 +40,22 @@ movie::movie(movie&& other) noexcept
 }
 
 movie::~movie() {
-    std::cout << "The destructor was called for " << title << std::endl;
+    std::cout << "The destructor was called for " << title <<" of parent class movie"<< std::endl;
     count--;
 }
 
 std::string movie::getTitle() const {
     return title;
 }
-
 std::string movie::getDirector() const {
     return director;
 }
-
 std::string movie::getPlot() const {
     return plot;
 }
-
 int movie::getRunningTime() const {
     return runningTime;
 }
-
 int movie::getBudget() const {
     return budget;
 }
@@ -67,26 +63,23 @@ int movie::getBudget() const {
 void movie::setTitle(const std::string& newTitle) {
     title = newTitle;
 }
-
 void movie::setDirector(const std::string& newDirector) {
     director = newDirector;
 }
-
 void movie::setPlot(const std::string& newPlot) {
     plot = newPlot;
 }
-
 void movie::setRunningTime(int newRunningTime) {
     if (newRunningTime > 0) {
         runningTime = newRunningTime;
     }
 }
-
 void movie::setBudget(int newBudget) {
     if (newBudget >= 0) {
         budget = newBudget;
     }
 }
+
 
 int movie::getObjectCount() {
     return count;
