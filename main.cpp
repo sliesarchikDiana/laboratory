@@ -5,16 +5,21 @@
 #include "romCom.h"
 #include <thriller.h>
 #include <utility>
-//#include "movie.h"
 using namespace std;
 
 int main() {
     cout << "Test begin"<< endl;
 
-    action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000);
+    action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000, 20);
     action defaultAction;
 
-    sciFy alien("Alien", "Ridley Scott", "A spaceship crew is stalked by an alien", 117, 11000000);
+    std::cout << std::endl;
+    avengers.displayDetails();
+    std::cout << std::endl;
+    defaultAction.displayDetails();
+
+
+/*    sciFy alien("Alien", "Ridley Scott", "A spaceship crew is stalked by an alien", 117, 11000000);
     sciFy defaultSciFy;
 
     romCom sweetHomeAlabama("Sweet Home Alabama", "Andy Tennant", "A woman must choose between two loves.", 108, 30000000);
@@ -26,7 +31,7 @@ int main() {
     auto* originalThriller = new thriller("Inception", "Christopher Nolan", "A mind-bending heist within dreams", 148, 160000000);
     thriller movedThriller(std::move(*originalThriller));
     delete originalThriller;
-
+*/
     std::cout << std::endl;
 /*    std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
     std::cout << std::endl;
