@@ -11,18 +11,15 @@ action::action(std::string title, std::string director, std::string plot, int ru
     std::cout << "Parameterized constructor was called for " << getTitle() << " of class action" << std::endl;
 }
 
-
 action::action(const action& other)
     : movie(other), explosions(other.explosions) {
     std::cout << "Copy constructor was called for " << getTitle() << " of class action" << std::endl;
 }
 
-
 action::action(action&& other) noexcept
     : movie(std::move(other)){
     std::cout << "Move constructor was called for " << getTitle() << " of class action" << std::endl;
 }
-
 
 action::~action() {
     std::cout << "The destructor was called for " << getTitle() << " of class action" << std::endl;
@@ -42,6 +39,6 @@ void action::displayDetails() const {
               << "\nDirector: " << getDirector()
               << "\nPlot: " << getPlot()
               << "\nRunning Time: " << getRunningTime() << " minutes"
-              << "\nBudget: $" << getBudget()
+              << "\nBudget: " << getBudget() <<"$"
               << "\nExplosions: " << explosions << std::endl;
 }

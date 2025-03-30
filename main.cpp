@@ -18,8 +18,7 @@ int main() {
     std::cout << std::endl;
     defaultAction.displayDetails();
 
-    std::cout << std::endl;
-    std::cout << "Object count for action: " << action::getObjectCount() << std::endl;
+    std::cout<<std::endl << "Object count for action: " << action::getObjectCount() << std::endl;
 
 /*    sciFy alien("Alien", "Ridley Scott", "A spaceship crew is stalked by an alien", 117, 11000000);
     sciFy defaultSciFy;
