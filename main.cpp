@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include "action.h"
-//#include "sciFy.h"
+#include "sciFy.h"
 //#include "romCom.h"
 //#include <thriller.h>
 //#include <utility>
@@ -18,11 +18,20 @@ int main() {
     std::cout << std::endl;
     defaultAction.displayDetails();
 
-    std::cout<<std::endl << "Object count for action: " << action::getObjectCount() << std::endl;
+    std::cout<<std::endl << "Movies count: " << action::getObjectCount() << std::endl;
+    std::cout << std::endl;
 
-/*    sciFy alien("Alien", "Ridley Scott", "A spaceship crew is stalked by an alien", 117, 11000000);
+    sciFy alien("Alien", "Ridley Scott", "A spaceship crew is stalked by an alien", 117, 11000000, TimePeriod::SpaceAge);
     sciFy defaultSciFy;
 
+    std::cout << std::endl;
+    alien.displayDetails();
+    std::cout << std::endl;
+    defaultSciFy.displayDetails();
+
+    std::cout<<std::endl << "Movies count: " << sciFy::getObjectCount() << std::endl;
+    std::cout << std::endl;
+    /*
     romCom sweetHomeAlabama("Sweet Home Alabama", "Andy Tennant", "A woman must choose between two loves.", 108, 30000000);
     romCom defaultRomCom;
 
