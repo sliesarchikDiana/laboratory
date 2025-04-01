@@ -111,3 +111,14 @@ std::istream& operator>>(std::istream& is, movie& t) {
 int operator+(const movie& lhs, const movie& rhs) {
     return lhs.getRunningTime() + rhs.getRunningTime();
 }
+
+movie& movie::operator=(const movie& other) {
+    if (this != &other) {  // Check for self-assignment
+        title = other.title;
+        director = other.director;
+        plot = other.plot;
+        runningTime = other.runningTime;
+        budget = other.budget;
+    }
+    return *this;
+}

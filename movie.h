@@ -39,6 +39,7 @@ public:
 
     virtual void displayDetails() const = 0;
 
+    movie& operator=(const movie& other);
 
 };
 

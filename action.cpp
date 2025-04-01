@@ -83,3 +83,12 @@ void action::displayDetails() const {
     }
     std::cout << std::endl;
 }
+
+action& action::operator=(const action& other) {
+    if (this != &other) {
+        movie::operator=(other);  // Now works because `movie::operator=` exists
+        explosions = other.explosions;
+        movieCast = other.movieCast;
+    }
+    return *this;
+}

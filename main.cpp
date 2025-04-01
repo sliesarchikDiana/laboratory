@@ -8,6 +8,11 @@ using namespace std;
 
 int main() {
     cout << "Test begin"<< endl;
+    action movie1("Fast X", "Director", "Plot", 120, 200000000, 50);
+    action movie2;
+    movie2 = movie1;
+
+    movie2.displayDetails();
     std::cout<<endl;
     action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000, 20);
     avengers.addActor("Robert Downey Jr.");
@@ -98,6 +103,6 @@ int main() {
     std::cin >> myThriller;
     std::cout << myThriller;
 */
-    std::cout << "Total Running Time: " << alien + avengers << " minutes" << std::endl;
+   std::cout << "Total Running Time: " << alien + avengers << " minutes" << std::endl;
     return 0;
 }
