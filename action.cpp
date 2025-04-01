@@ -84,9 +84,9 @@ void action::displayDetails() const {
     std::cout << std::endl;
 }
 
-action& action::operator=(const action& other) {
+action& action::operator=(const action& other) { //copy assignment operator//
     if (this != &other) {
-        movie::operator=(other);  // Now works because `movie::operator=` exists
+        movie::operator=(other);
         explosions = other.explosions;
         movieCast = other.movieCast;
     }
