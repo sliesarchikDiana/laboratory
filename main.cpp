@@ -4,7 +4,7 @@
 #include "sciFy.h"
 #include "romance.h"
 #include <thriller.h>
-//#include <utility>
+#include <utility>
 using namespace std;
 
 int main() {
@@ -65,9 +65,9 @@ int main() {
     std::cout << std::endl;
     movedThriller.displayDetails();
 
-/*    std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
+    std::cout << "Moved Thriller Title: " << movedThriller.getTitle() << std::endl;
     std::cout << std::endl;
-*/
+
     const thriller se7en("Se7en", "David Fincher", "Detectives track down a serial killer who uses deadly sins as motives.", 127, 33000000, false);
     std::cout << std::endl;
 
@@ -81,10 +81,7 @@ int main() {
 /*    thriller myThriller;
     std::cin >> myThriller;
     std::cout << myThriller;
-
-    int totalRuntime = silenceOfLambs + movedThriller;
-    std::cout << "Total Running Time: " << totalRuntime << " minutes" << std::endl;
-    std::cout << std::endl;
-    */
+*/
+    std::cout << "Total Running Time: " << alien + avengers << " minutes" << std::endl;
     return 0;
 }
