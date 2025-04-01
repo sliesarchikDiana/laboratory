@@ -1,6 +1,6 @@
 #include "action.h"
-#include <iostream>
 #include <utility>
+#include <vector>
 
 action::action() : movie("Unknown action", "Unknown", "Unknown", 0, 0), explosions(0) {
     std::cout << "Default constructor was called for " << getTitle() << " of class action" << std::endl;
@@ -29,16 +29,57 @@ action::~action() {
 int action::getExplosions() const {
     return explosions;
 }
+
 void action::setExplosions(int newExplosions) {
-    explosions = newExplosions;
+    if (newExplosions >= 0) {
+        explosions = newExplosions;
+    }
 }
 
+// Cast-related methods implementation
+void action::addActor(const std::string& actor) {
+    movieCast.addActor(actor);
+}
+
+void action::removeActor(const std::string& actor) {
+    movieCast.removeActor(actor);
+}
+
+const std::vector<std::string>& action::getActors() const {
+    return movieCast.getActors();
+}
+
+bool action::hasActor(const std::string& actor) const {
+    return movieCast.hasActor(actor);
+}
+
+void action::clearCast() {
+    movieCast.clearCast();
+}
+
+size_t action::castSize() const {
+    return movieCast.size();
+}
 
 void action::displayDetails() const {
     std::cout << "Action Movie: " << getTitle()
               << "\nDirector: " << getDirector()
               << "\nPlot: " << getPlot()
               << "\nRunning Time: " << getRunningTime() << " minutes"
-              << "\nBudget: " << getBudget() <<"$"
-              << "\nExplosions: " << explosions << std::endl;
+              << "\nBudget: " << getBudget() << "$"
+              << "\nExplosions: " << explosions
+              << "\nCast: ";
+
+    const auto& actors = getActors();
+    if (actors.empty()) {
+        std::cout << "None";
+    } else {
+        for (size_t i = 0; i < actors.size(); ++i) {
+            std::cout << actors[i];
+            if (i != actors.size() - 1) {
+                std::cout << ", ";
+            }
+        }
+    }
+    std::cout << std::endl;
 }

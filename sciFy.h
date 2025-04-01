@@ -1,7 +1,6 @@
 #ifndef SCIFY_H
 #define SCIFY_H
 #include "movie.h"
-#include <string>
 #include <iosfwd>
 
 enum class TimePeriod {

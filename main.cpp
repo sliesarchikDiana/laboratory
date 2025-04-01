@@ -4,14 +4,30 @@
 #include "sciFy.h"
 #include "romance.h"
 #include <thriller.h>
-#include <utility>
 using namespace std;
 
 int main() {
     cout << "Test begin"<< endl;
-
+    std::cout<<endl;
     action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000, 20);
+    avengers.addActor("Robert Downey Jr.");
+    avengers.addActor("Chris Evans");
+    avengers.addActor("Mark Ruffalo");
+    avengers.addActor("Chris Hemsworth");
+    avengers.addActor("Scarlett Johansson");
+    avengers.displayDetails();
+    std::cout<<endl;
     action defaultAction;
+    std::cout<<endl;
+    action fastAndFurious("Fast and Furious", "Justin Lin", "Street racing and heists", 130, 200000000, 25);
+    fastAndFurious.addActor("Vin Diesel");
+    fastAndFurious.addActor("Paul Walker");
+    fastAndFurious.addActor("Dwayne Johnson");
+    fastAndFurious.displayDetails();
+    std::cout<<endl;
+    std::cout<<"The time needed to watch the movies "<<avengers+fastAndFurious<<" minutes"<<endl;
+    std::cout<<endl;
+
 
     std::cout << std::endl;
     avengers.displayDetails();

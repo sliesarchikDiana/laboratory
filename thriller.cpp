@@ -1,7 +1,6 @@
 #include "thriller.h"
 #include "movie.h"
 #include <iostream>
-#include <string>
 #include <utility>
 
 thriller::thriller() : movie("Unknown thriller", "Unknown", "Unknown", 0, 0), isChildFriendly(false) {
@@ -28,7 +27,7 @@ thriller::~thriller() {
 }
 
 
-int thriller::getIsChildFriendly() const {
+bool thriller::getIsChildFriendly() const {
     return isChildFriendly;
 }
 void thriller::setIsChildFriendly(bool newIsChildFriendly) {

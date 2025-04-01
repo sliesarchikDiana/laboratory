@@ -1,7 +1,6 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <string>
-
 class movie {
 private:
     std::string title;
@@ -9,6 +8,8 @@ private:
     std::string plot;
     int runningTime;
     int budget;
+
+
     static int count;
 
 public:
@@ -37,6 +38,8 @@ public:
     friend int operator+(const movie& lhs, const movie& rhs);
 
     virtual void displayDetails() const = 0;
+
+
 };
 
 #endif // MOVIE_H
