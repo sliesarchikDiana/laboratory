@@ -161,12 +161,12 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "romCom.cpp",
+			"path" : "romance.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "romCom.h",
+			"path" : "romance.h",
 			"sourceGroupIndex" : 1
 		},
 		{

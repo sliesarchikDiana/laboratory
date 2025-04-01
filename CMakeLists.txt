@@ -11,8 +11,8 @@ add_executable(laboratory
     main.cpp
         sciFy.cpp
         sciFy.h
-        romCom.cpp
-        romCom.h
+        romance.cpp
+        romance.h
         thriller.cpp
         thriller.h
         movie.cpp

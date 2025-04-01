@@ -70,8 +70,8 @@ build CMakeFiles/laboratory.dir/sciFy.cpp.obj: CXX_COMPILER__laboratory_unscanne
   OBJECT_DIR = CMakeFiles\laboratory.dir
   OBJECT_FILE_DIR = CMakeFiles\laboratory.dir
 
-build CMakeFiles/laboratory.dir/romCom.cpp.obj: CXX_COMPILER__laboratory_unscanned_Debug C$:/Users/VivoBook/Desktop/laboratory/romCom.cpp || cmake_object_order_depends_target_laboratory
-  DEP_FILE = CMakeFiles\laboratory.dir\romCom.cpp.obj.d
+build CMakeFiles/laboratory.dir/romance.cpp.obj: CXX_COMPILER__laboratory_unscanned_Debug C$:/Users/VivoBook/Desktop/laboratory/romance.cpp || cmake_object_order_depends_target_laboratory
+  DEP_FILE = CMakeFiles\laboratory.dir\romance.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/VivoBook/Desktop/laboratory/.
   OBJECT_DIR = CMakeFiles\laboratory.dir
@@ -99,7 +99,7 @@ build CMakeFiles/laboratory.dir/movie.cpp.obj: CXX_COMPILER__laboratory_unscanne
 #############################################
 # Link the executable laboratory.exe
 
-build laboratory.exe: CXX_EXECUTABLE_LINKER__laboratory_Debug CMakeFiles/laboratory.dir/action.cpp.obj CMakeFiles/laboratory.dir/main.cpp.obj CMakeFiles/laboratory.dir/sciFy.cpp.obj CMakeFiles/laboratory.dir/romCom.cpp.obj CMakeFiles/laboratory.dir/thriller.cpp.obj CMakeFiles/laboratory.dir/movie.cpp.obj
+build laboratory.exe: CXX_EXECUTABLE_LINKER__laboratory_Debug CMakeFiles/laboratory.dir/action.cpp.obj CMakeFiles/laboratory.dir/main.cpp.obj CMakeFiles/laboratory.dir/sciFy.cpp.obj CMakeFiles/laboratory.dir/romance.cpp.obj CMakeFiles/laboratory.dir/thriller.cpp.obj CMakeFiles/laboratory.dir/movie.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\laboratory.dir

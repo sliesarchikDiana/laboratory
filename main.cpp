@@ -2,7 +2,7 @@
 #include <string>
 #include "action.h"
 #include "sciFy.h"
-//#include "romCom.h"
+#include "romance.h"
 //#include <thriller.h>
 //#include <utility>
 using namespace std;
@@ -10,7 +10,7 @@ using namespace std;
 int main() {
     cout << "Test begin"<< endl;
 
-    action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000, 20);
+/*    action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000, 20);
     action defaultAction;
 
     std::cout << std::endl;
@@ -28,14 +28,27 @@ int main() {
     alien.displayDetails();
     std::cout << std::endl;
     defaultSciFy.displayDetails();
-
+*/
     std::cout<<std::endl << "Movies count: " << sciFy::getObjectCount() << std::endl;
     std::cout << std::endl;
-    /*
-    romCom sweetHomeAlabama("Sweet Home Alabama", "Andy Tennant", "A woman must choose between two loves.", 108, 30000000);
-    romCom defaultRomCom;
+    romance sweetHomeAlabama("Sweet Home Alabama", "Andy Tennant", "A woman must choose between two loves.", 108, 30000000, true);
+    romance laLaLand("La La Land", "Damien Chazelle", "A jazz pianist and actress fall in love while pursuing dreams in Los Angeles.",128, 30000000, false);
+    romance defaultRomance;
 
-    thriller silenceOfLambs("The Silence of the Lambs", "Jonathan Demme","FBI cadet must receive help from a cannibal to catch another serial killer.", 118, 19000000);
+
+    std::cout << std::endl;
+    sweetHomeAlabama.displayDetails();
+    std::cout << std::endl;
+    laLaLand.displayDetails();
+    std::cout << std::endl;
+    defaultRomance.displayDetails();
+
+
+    std::cout<<std::endl << "Movies count: " << action::getObjectCount() << std::endl;
+    std::cout << std::endl;
+
+
+/*    thriller silenceOfLambs("The Silence of the Lambs", "Jonathan Demme","FBI cadet must receive help from a cannibal to catch another serial killer.", 118, 19000000);
     thriller defaultThriller;
 
     auto* originalThriller = new thriller("Inception", "Christopher Nolan", "A mind-bending heist within dreams", 148, 160000000);
