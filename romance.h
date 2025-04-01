@@ -14,7 +14,7 @@ class romance: public movie {
         ~romance() override;
 
         static std::string happyEndingToMessage(bool ending);
-        int getHappyEnding() const;
+        bool getHappyEnding() const;
 
         void setHappyEnding(bool newHappyEnding);
 

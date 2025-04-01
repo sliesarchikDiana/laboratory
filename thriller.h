@@ -15,7 +15,7 @@ public:
     ~thriller() override;
 
     static std::string isChildFriendlyToMessage(bool ending);
-    int getIsChildFriendly() const;
+    bool getIsChildFriendly() const;
 
     void setIsChildFriendly(bool newIsChildFriendly);
 

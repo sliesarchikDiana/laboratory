@@ -49,7 +49,7 @@ std::string romance::happyEndingToMessage(bool ending) {
 }
 
 void romance::displayDetails() const {
-    std::cout << "Action Movie: " << getTitle()
+    std::cout << "Romance Movie: " << getTitle()
               << "\nDirector: " << getDirector()
               << "\nPlot: " << getPlot()
               << "\nRunning Time: " << getRunningTime() << " minutes"
