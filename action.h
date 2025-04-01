@@ -3,6 +3,7 @@
 #include "movie.h"
 #include <string>
 #include <iostream>
+#include "cast.h"
 
 class action : public movie {
 private:

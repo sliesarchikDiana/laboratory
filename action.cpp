@@ -1,5 +1,6 @@
 #include "action.h"
 #include <utility>
+#include <vector>
 
 action::action() : movie("Unknown action", "Unknown", "Unknown", 0, 0), explosions(0) {
     std::cout << "Default constructor was called for " << getTitle() << " of class action" << std::endl;

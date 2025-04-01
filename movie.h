@@ -1,8 +1,6 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <string>
-#include "cast.h"
-
 class movie {
 private:
     std::string title;
