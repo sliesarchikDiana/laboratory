@@ -10,15 +10,10 @@ private:
 public:
     cast() = default;
     void addActor(const std::string& actor);
-
     void removeActor(const std::string& actor);
-
     const std::vector<std::string>& getActors() const;
-
     bool hasActor(const std::string& actor) const;
-
     void clearCast();
-
     size_t size() const;
 };
 

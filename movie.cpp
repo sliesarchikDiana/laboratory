@@ -16,13 +16,21 @@ movie::movie(std::string t, std::string d, std::string p, int rt, int b)
     count++;
 }
 
-
 movie::movie(const movie& other)
     : title(other.title), director(other.director), plot(other.plot), runningTime(other.runningTime), budget(other.budget) {
     count++;
     std::cout << "Copy constructor was called for " << title <<" of parent class movie"<< std::endl;
 }
-
+movie& movie::operator=(const movie& other) { //copy assignment operator//
+    if (this != &other) {
+        title = other.title;
+        director = other.director;
+        plot = other.plot;
+        runningTime = other.runningTime;
+        budget = other.budget;
+    }
+    return *this;
+}
 movie::movie(movie&& other) noexcept
     : title(std::move(other.title)),
       director(std::move(other.director)),
@@ -110,15 +118,4 @@ std::istream& operator>>(std::istream& is, movie& t) {
 
 int operator+(const movie& lhs, const movie& rhs) {
     return lhs.getRunningTime() + rhs.getRunningTime();
-}
-
-movie& movie::operator=(const movie& other) {
-    if (this != &other) {  // Check for self-assignment
-        title = other.title;
-        director = other.director;
-        plot = other.plot;
-        runningTime = other.runningTime;
-        budget = other.budget;
-    }
-    return *this;
 }

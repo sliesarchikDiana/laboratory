@@ -8,15 +8,12 @@ private:
     std::string plot;
     int runningTime;
     int budget;
-
-
     static int count;
-
 public:
     movie();
     movie(std::string title, std::string director, std::string plot, int runningTime, int budget);
-    movie(const movie& other);
-    movie(movie&& other) noexcept;
+    movie(const movie& other); //copy//
+    movie(movie&& other) noexcept; //move//
     virtual ~movie();
 
     std::string getTitle() const;
@@ -39,7 +36,7 @@ public:
 
     virtual void displayDetails() const = 0;
 
-    movie& operator=(const movie& other);
+    movie& operator=(const movie& other); //copy assignment operator//
 
 };
 
