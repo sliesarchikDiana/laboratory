@@ -44,39 +44,10 @@ std::string thriller::isChildFriendlyToMessage(bool childFriendly) {
 }
 
 void thriller::displayDetails() const {
-    std::cout << "Action Movie: " << getTitle()
+    std::cout << "Thriller Movie: " << getTitle()
               << "\nDirector: " << getDirector()
               << "\nPlot: " << getPlot()
               << "\nRunning Time: " << getRunningTime() << " minutes"
               << "\nBudget: " << getBudget() <<"$"
               << "\nAge limit: " << isChildFriendlyToMessage(isChildFriendly) << std::endl;
 }
-
-/*
- std::ostream& operator<<(std::ostream& os, const thriller& t) {
-    os << "Title: " << t.title << "\n"
-       << "Director: " << t.director << "\n"
-       << "Plot: " << t.plot << "\n"
-       << "Running Time: " << t.runningTime << " minutes\n"
-       << "Budget: tes" << t.budget << std::endl;
-    return os;
-}
-
-std::istream& operator>>(std::istream& is, thriller& t) {
-    std::cout << "Enter title: ";
-    std::getline(is, t.title);
-    std::cout << "Enter director: ";
-    std::getline(is, t.director);
-    std::cout << "Enter plot: ";
-    std::getline(is, t.plot);
-    std::cout << "Enter running time: ";
-    is >> t.runningTime;
-    std::cout << "Enter budget: ";
-    is >> t.budget;
-    return is;
-}
-
-int operator+(const thriller& lhs, const thriller& rhs) {
-    return lhs.getRunningTime() + rhs.getRunningTime();
-}
-*/
