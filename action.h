@@ -27,8 +27,9 @@ public:
     void clearCast();
     size_t castSize() const;
 
-
     void displayDetails() const override;
+
+    action& operator=(const action& other);  // Copy assignment
 };
 
 #endif // ACTION_H
