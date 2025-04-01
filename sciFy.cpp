@@ -23,7 +23,7 @@ sciFy::sciFy(sciFy&& other) noexcept: movie(std::move(other)), timePeriod(other.
 }
 
 sciFy::~sciFy() {
-    std::cout << "Destructor was called for " << getTitle() << " of class sci-fi" << std::endl;
+    std::cout << "The destructor was called for " << getTitle() << " of class sci-fi" << std::endl;
 }
 
 TimePeriod sciFy::getTimePeriod() const noexcept {

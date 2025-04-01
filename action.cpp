@@ -1,5 +1,4 @@
 #include "action.h"
-#include <iostream>
 #include <utility>
 
 action::action() : movie("Unknown action", "Unknown", "Unknown", 0, 0), explosions(0) {
@@ -29,11 +28,12 @@ action::~action() {
 int action::getExplosions() const {
     return explosions;
 }
+
 void action::setExplosions(int newExplosions) {
-    explosions = newExplosions;
+    if (newExplosions >= 0) {
+        explosions = newExplosions;
+    }
 }
-
-
 void action::displayDetails() const {
     std::cout << "Action Movie: " << getTitle()
               << "\nDirector: " << getDirector()

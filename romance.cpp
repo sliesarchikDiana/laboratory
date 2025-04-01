@@ -2,13 +2,6 @@
 #include <iostream>
 #include <utility>
 
-
-/*romance::romance(): romance("Unknown romcom", "Unknown", "plot", 100, 1000000)
-{
-    std::cout<<"Delegated constructor was called for " << title<<" of class romCom" << std::endl;
-}
-
-*/
 romance::romance() : movie("Unknown romance", "Unknown", "Unknown", 0, 0), happyEnding(true) {
     std::cout << "Default constructor was called for " << getTitle() << " of class romance" << std::endl;
 }
@@ -33,7 +26,7 @@ romance::~romance() {
 }
 
 
-int romance::getHappyEnding() const {
+bool romance::getHappyEnding() const {
     return happyEnding;
 }
 void romance::setHappyEnding(bool newHappyEnding) {

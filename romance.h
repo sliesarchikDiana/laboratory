@@ -20,4 +20,4 @@ class romance: public movie {
 
         void displayDetails() const override;
     };
-#endif //ROMCOM_H
+#endif //ROMANCE_H

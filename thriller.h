@@ -18,7 +18,6 @@ public:
     bool getIsChildFriendly() const;
 
     void setIsChildFriendly(bool newIsChildFriendly);
-
     void displayDetails() const override;
 };
 #endif // THRILLER_H
