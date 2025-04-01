@@ -17,4 +17,7 @@ add_executable(laboratory
         thriller.h
         movie.cpp
         movie.h
-        movie.cpp)
+        movie.cpp
+        Cast.cpp
+        Cast.h
+)

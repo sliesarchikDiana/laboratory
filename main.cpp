@@ -4,13 +4,28 @@
 #include "sciFy.h"
 #include "romance.h"
 #include <thriller.h>
+#include "cast.h"
 using namespace std;
 
 int main() {
     cout << "Test begin"<< endl;
 
     action avengers("Avengers: Endgame", "Brothers Russo", "Superheroes save the planet", 181, 356000000, 20);
+    avengers.addActor("Robert Downey Jr.");
+    avengers.addActor("Chris Evans");
+    avengers.addActor("Mark Ruffalo");
+    avengers.addActor("Chris Hemsworth");
+    avengers.addActor("Scarlett Johansson");
+    avengers.displayDetails();
+    std::cout<<endl;
     action defaultAction;
+
+    action fastAndFurious("Fast and Furious", "Justin Lin", "Street racing and heists", 130, 200000000, 25);
+    fastAndFurious.addActor("Vin Diesel");
+    fastAndFurious.addActor("Paul Walker");
+    fastAndFurious.addActor("Dwayne Johnson");
+    fastAndFurious.displayDetails();
+/*
 
     std::cout << std::endl;
     avengers.displayDetails();
@@ -81,6 +96,6 @@ int main() {
     std::cin >> myThriller;
     std::cout << myThriller;
 */
-    std::cout << "Total Running Time: " << alien + avengers << " minutes" << std::endl;
+ //   std::cout << "Total Running Time: " << alien + avengers << " minutes" << std::endl;
     return 0;
 }
