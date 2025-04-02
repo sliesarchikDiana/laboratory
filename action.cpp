@@ -36,7 +36,7 @@ void action::setExplosions(int newExplosions) {
     }
 }
 
-// Cast-related methods implementation
+
 void action::addActor(const std::string& actor) {
     movieCast.addActor(actor);
 }
