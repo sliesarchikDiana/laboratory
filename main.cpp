@@ -1,13 +1,19 @@
 #include <iostream>
-#include <string>
+/*
+ #include <string>
 #include "action.h"
 #include "sciFy.h"
 #include "romance.h"
-#include <thriller.h>
+#include "thriller.h"
+*/
+#include "terminal_interface.h"
 using namespace std;
 
 int main() {
     cout << "Test begin"<< endl;
+    TerminalInterface interface;
+    interface.run();
+    /*
     action movie1("Fast X", "Director", "Plot", 120, 200000000, 50);
     action movie2;
     movie2 = movie1;
@@ -99,10 +105,11 @@ int main() {
     std::cout<<std::endl << "Movies count: " << action::getObjectCount() << std::endl;
     std::cout << std::endl;
 
-/*    thriller myThriller;
+   thriller myThriller;
     std::cin >> myThriller;
     std::cout << myThriller;
-*/
+
    std::cout << "Total Running Time: " << alien + avengers << " minutes" << std::endl;
+    */
     return 0;
 }
