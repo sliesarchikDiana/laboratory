@@ -116,8 +116,8 @@ void TerminalInterface::addMovie() {
             break;
         }
         case 4: {
-            bool supernatural = getYesNo("Supernatural? (y/n): ");
-            movies.push_back(make_unique<thriller>(title, director, plot, runtime, budget, supernatural));
+            bool isChildFriendly = getYesNo("Is the movie safe for younger audience? (y/n): ");
+            movies.push_back(make_unique<thriller>(title, director, plot, runtime, budget, isChildFriendly));
             break;
         }
         default: // Added default case
