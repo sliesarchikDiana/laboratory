@@ -18,6 +18,7 @@ add_executable(laboratory
         movie.cpp
         movie.h
         movie.cpp
-        Cast.cpp
-        Cast.h
+        movie_interface.h
+        terminal_interface.cpp
+        terminal_interface.h
 )
