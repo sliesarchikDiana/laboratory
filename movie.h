@@ -1,6 +1,7 @@
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <string>
+#include <iostream>
 class movie {
 private:
     std::string title;
@@ -38,6 +39,11 @@ public:
 
     movie& operator=(const movie& other); //copy assignment operator//
 
+    //static binding//
+    void printBasicInfo() const {
+        std::cout << "[Static Binding] Title: " << title
+                  << " | Director: " << director << "\n";
+    }
 };
 
 #endif // MOVIE_H

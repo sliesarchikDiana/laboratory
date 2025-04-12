@@ -1,11 +1,12 @@
-#include <iostream>
 /*
- #include <string>
+notNeeded
+#include <string>
 #include "action.h"
 #include "sciFy.h"
 #include "romance.h"
 #include "thriller.h"
 */
+#include <iostream>
 #include "terminal_interface.h"
 using namespace std;
 
@@ -14,6 +15,7 @@ int main() {
     TerminalInterface interface;
     interface.run();
     /*
+    objects
     action movie1("Fast X", "Director", "Plot", 120, 200000000, 50);
     action movie2;
     movie2 = movie1;

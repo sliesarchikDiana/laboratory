@@ -9,7 +9,6 @@
 
 using namespace std;
 
-// Made static as suggested
 int MovieInterface::getInt(const string& prompt, int min, int max) {
     int value;
     while (true) {
@@ -27,8 +26,6 @@ int MovieInterface::getInt(const string& prompt, int min, int max) {
         }
     }
 }
-
-// Made static as suggested
 string MovieInterface::getString(const string& prompt) {
     string input;
     while (true) {
@@ -39,21 +36,18 @@ string MovieInterface::getString(const string& prompt) {
     }
 }
 
-// Made static as suggested
 bool MovieInterface::getYesNo(const string& prompt) {
     char input;
     while (true) {
         cout << prompt;
         cin >> input;
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        // Fixed narrowing conversion by using static_cast
         input = static_cast<char>(tolower(static_cast<unsigned char>(input)));
         if (input == 'y') return true;
         if (input == 'n') return false;
         cout << "Please enter 'y' or 'n'." << endl;
     }
 }
-
 void TerminalInterface::run() {
     while (true) {
         showMenu();
@@ -141,7 +135,6 @@ void TerminalInterface::listMovies() const {
 
     cout << "\n=== Movie List ===\n";
     for (size_t i = 0; i < movies.size(); i++) {
-        // Fixed narrowing conversion
         cout << static_cast<int>(i+1) << ". " << movies[i]->getTitle() << endl;
     }
 }
@@ -151,8 +144,11 @@ void TerminalInterface::viewMovie() const {
     if (movies.empty()) return;
 
     int choice = getInt("Select movie to view: ", 1, static_cast<int>(movies.size()));
-    cout << "\n=== Movie Details ===\n";
-    movies[choice-1]->displayDetails();
+    const movie& movieRef = *movies[choice - 1]; // Base class reference
+    // Static binding
+    movieRef.printBasicInfo();
+    // Dynamic binding
+    movieRef.displayDetails();
 }
 
 void TerminalInterface::deleteMovie() {
@@ -179,8 +175,6 @@ void TerminalInterface::clearMovies() {
 
 void TerminalInterface::editMovie(movie& m) {
     cout << "\n=== Editing Movie ===\n";
-
-    // First edit base properties common to all movies
     editBaseProperties(m);
     cout << "Movie updated successfully!\n";
 }
