@@ -13,7 +13,6 @@ private:
     void viewMovie() const;
     void deleteMovie();
     void clearMovies();
-
     void static editMovie(movie& m);
     static void editBaseProperties(movie& m);
 };
