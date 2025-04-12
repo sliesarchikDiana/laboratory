@@ -34,9 +34,6 @@ void thriller::setIsChildFriendly(bool newIsChildFriendly) {
     isChildFriendly = newIsChildFriendly;
 }
 
-
-
-
 std::string thriller::isChildFriendlyToMessage(bool childFriendly) {
     if (childFriendly) {
         return "is child friendly";
@@ -44,8 +41,6 @@ std::string thriller::isChildFriendlyToMessage(bool childFriendly) {
         return "for adult audience only";
     }
 }
-
-
 
 void thriller::displayDetails() const {
     std::cout << "Thriller Movie: " << getTitle()
