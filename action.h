@@ -2,7 +2,6 @@
 #define ACTION_H
 #include "movie.h"
 #include <string>
-#include <iostream>
 
 class action final : public movie {
 private:
