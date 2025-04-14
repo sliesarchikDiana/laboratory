@@ -14,7 +14,9 @@ protected:
     static int getInt(const std::string& prompt, int min, int max);
     static std::string getString(const std::string& prompt);
     static bool getYesNo(const std::string& prompt);
-    std::vector<std::unique_ptr<movie>> movies; //Base class pointer//
+    void loadMovies();
+    void saveMovies() const;
+    std::vector<std::unique_ptr<movie>> movies;
 };
 
 #endif

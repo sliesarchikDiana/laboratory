@@ -5,15 +5,16 @@
 class TerminalInterface : public MovieInterface {
 public:
     void run() override;
-    
+
 private:
-    static void showMenu();
+    static void showAdminMenu();
+    static void showUserMenu();
     void addMovie();
     void listMovies() const;
     void viewMovie() const;
     void deleteMovie();
     void clearMovies();
-    void static editMovie(movie& m);
+    static void editMovie(movie& m);
     static void editBaseProperties(movie& m);
 };
 

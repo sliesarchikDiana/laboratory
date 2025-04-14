@@ -17,3 +17,13 @@
 14	11696	7663115195921895	CMakeFiles/laboratory.dir/romance.cpp.obj	266c77693d84e2b1
 263	14994	7663115198421758	CMakeFiles/laboratory.dir/terminal_interface.cpp.obj	e9ecc6494c1d31cc
 14995	20736	7663115345735779	laboratory.exe	e1a15efce0a4a670
+27	2362	7663547015456240	CMakeFiles/laboratory.dir/action.cpp.obj	1bc568e31c2daad
+130	2550	7663547016494045	CMakeFiles/laboratory.dir/main.cpp.obj	71402a2ded118157
+272	3660	7663547017906834	CMakeFiles/laboratory.dir/terminal_interface.cpp.obj	e9ecc6494c1d31cc
+3660	4658	7663547051788638	laboratory.exe	e1a15efce0a4a670
+34	2032	7663562080321321	CMakeFiles/laboratory.dir/main.cpp.obj	71402a2ded118157
+263	2836	7663562082608228	CMakeFiles/laboratory.dir/terminal_interface.cpp.obj	e9ecc6494c1d31cc
+2836	3863	7663562108347958	laboratory.exe	e1a15efce0a4a670
+27	1324	7663584626310946	CMakeFiles/laboratory.dir/main.cpp.obj	71402a2ded118157
+115	2199	7663584627181395	CMakeFiles/laboratory.dir/terminal_interface.cpp.obj	e9ecc6494c1d31cc
+2199	3115	7663584648028991	laboratory.exe	e1a15efce0a4a670
