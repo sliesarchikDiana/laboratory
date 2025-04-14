@@ -120,7 +120,7 @@ void TerminalInterface::addMovie() {
             movies.push_back(make_unique<thriller>(title, director, plot, runtime, budget, isChildFriendly));
             break;
         }
-        default: // Added default case
+        default:
             cout << "Invalid movie type." << endl;
             return;
     }
