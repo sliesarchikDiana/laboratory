@@ -99,27 +99,19 @@ void MovieInterface::saveMovies() const {
     for (const auto& m : movies) {
         if (dynamic_cast<action*>(m.get())) {
             auto* a = dynamic_cast<action*>(m.get());
-            file << "ACTION\n" << a->getTitle() << "\n" << a->getDirector() << "\n"
-                 << a->getPlot() << "\n" << a->getRunningTime() << " " << a->getBudget()
-                 << "\n" << a->getExplosions() << "\n";
+            file << "ACTION\n" << a->getTitle() << "\n" << a->getDirector() << "\n" << a->getPlot() << "\n" << a->getRunningTime() << " " << a->getBudget() << "\n" << a->getExplosions() << "\n";
         }
         else if (dynamic_cast<sciFy*>(m.get())) {
             auto* s = dynamic_cast<sciFy*>(m.get());
-            file << "SCIFI\n" << s->getTitle() << "\n" << s->getDirector() << "\n"
-                 << s->getPlot() << "\n" << s->getRunningTime() << " " << s->getBudget()
-                 << "\n" << static_cast<int>(s->getTimePeriod()) << "\n";
+            file << "SCIFI\n" << s->getTitle() << "\n" << s->getDirector() << "\n" << s->getPlot() << "\n" << s->getRunningTime() << " " << s->getBudget() << "\n" << static_cast<int>(s->getTimePeriod()) << "\n";
         }
         else if (dynamic_cast<romance*>(m.get())) {
             auto* r = dynamic_cast<romance*>(m.get());
-            file << "ROMANCE\n" << r->getTitle() << "\n" << r->getDirector() << "\n"
-                 << r->getPlot() << "\n" << r->getRunningTime() << " " << r->getBudget()
-                 << "\n" << r->getHappyEnding() << "\n";
+            file << "ROMANCE\n" << r->getTitle() << "\n" << r->getDirector() << "\n" << r->getPlot() << "\n" << r->getRunningTime() << " " << r->getBudget() << "\n" << r->getHappyEnding() << "\n";
         }
         else if (dynamic_cast<thriller*>(m.get())) {
             auto* t = dynamic_cast<thriller*>(m.get());
-            file << "THRILLER\n" << t->getTitle() << "\n" << t->getDirector() << "\n"
-                 << t->getPlot() << "\n" << t->getRunningTime() << " " << t->getBudget()
-                 << "\n" << t->getIsChildFriendly() << "\n";
+            file << "THRILLER\n" << t->getTitle() << "\n" << t->getDirector() << "\n" << t->getPlot() << "\n" << t->getRunningTime() << " " << t->getBudget() << "\n" << t->getIsChildFriendly() << "\n";
         }
     }
     file.close();
@@ -215,8 +207,7 @@ void TerminalInterface::addMovie() {
             break;
         }
         case 2: {
-            cout << "1. No Info\n2. Near Future\n3. Dystopian\n"
-                 << "4. Cyberpunk\n5. Space Age\n6. Alternate History\n";
+            cout << "1. No Info\n2. Near Future\n3. Dystopian\n" << "4. Cyberpunk\n5. Space Age\n6. Alternate History\n";
             TimePeriod period = static_cast<TimePeriod>(getInt("Time period: ", 1, 6) - 1);
             movies.push_back(make_unique<sciFy>(title, director, plot, runtime, budget, period));
             break;
